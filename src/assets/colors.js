@@ -1,4 +1,4 @@
-export const colors = [
+export const COLORS = [
   'AliceBlue',
   'AntiqueWhite',
   'Aqua',
@@ -59,7 +59,7 @@ export const colors = [
   'HoneyDew',
   'HotPink',
   'IndianRed ',
-  'Indigo  ',
+  'Indigo',
   'Ivory',
   'Khaki',
   'Lavender',
@@ -147,4 +147,15 @@ export const colors = [
   'WhiteSmoke',
   'Yellow',
   'YellowGreen',
+];
+
+export const darkColors = [
+  'Black',
+  'Blue',
+  'DarkBlue',
+  'Indigo',
+  'Maroon',
+  'MediumBlue',
+  'MidnightBlue',
+  'Navy',
 ];
