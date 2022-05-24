@@ -1,5 +1,5 @@
-import CopyIcon from './CopyIcon';
-import FileTickIcon from './FileTickIcon';
+import CopyIcon from './icons/CopyIcon';
+import FileTickIcon from './icons/FileTickIcon';
 
 const CopyText = ({ color, copied }) => {
   const lightText = color === 'Black' ? '' : 'light';
