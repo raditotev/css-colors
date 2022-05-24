@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -14,15 +16,21 @@ jobs:
         node-version: [16.x]
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '16.x'
           cache: 'npm'
-      - run: npm ci
-      - run: npm run build
-      - run: echo "css-colors.radi.pro" > build/CNAME
-      - run: git add build/
-      - run: git commit -m "Deploy gh-pages"
-      - run: git subtree push --prefix build origin gh-pages
+      - run: |
+          npm ci
+          npm run build
+          echo "css-colors.radi.pro" > build/CNAME
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: build
