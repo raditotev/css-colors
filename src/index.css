@@ -14,7 +14,7 @@ body {
   grid-gap: 10px;
 }
 
-.colorbox {
+.color-box {
   position: relative;
   height: 200px;
   display: flex;
@@ -32,7 +32,7 @@ body {
   opacity: 0;
 }
 
-.colorbox:hover .copy-text {
+.color-box:hover .copy-text {
   opacity: 100%;
   transition: all linear 0.5s;
 }
