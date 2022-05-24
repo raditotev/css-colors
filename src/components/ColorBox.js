@@ -18,7 +18,6 @@ const ColorBox = ({ color }) => {
 
   return (
     <div
-      key={color}
       className="color-box"
       style={style}
       onClick={() => copyHandler(color)}
