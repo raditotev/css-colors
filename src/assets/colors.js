@@ -1,4 +1,4 @@
-export const COLORS = [
+export const allColors = [
   'AliceBlue',
   'AntiqueWhite',
   'Aqua',
