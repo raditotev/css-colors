@@ -4,12 +4,14 @@ import { getColors, getColorGroups } from './lib/helpers';
 import ColorBox from './components/ColorBox';
 import ColorGroupItem from './components/ColorGroupItem';
 
+const allColors = 'all';
+
 function App() {
-  const [selectedColor, setSelectedColor] = useState('all');
+  const [selectedColor, setSelectedColor] = useState(allColors);
   const colors = getColors(selectedColor);
 
   const selectHandler = (group) => {
-    setSelectedColor((state) => (state === group ? 'all' : group));
+    setSelectedColor((state) => (state === group ? allColors : group));
   };
 
   return (
