@@ -36,7 +36,6 @@ export const allColors = [
   'DarkSeaGreen',
   'DarkSlateBlue',
   'DarkSlateGray',
-  'DarkSlateGrey',
   'DarkTurquoise',
   'DarkViolet',
   'DeepPink',
