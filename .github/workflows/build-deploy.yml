@@ -11,10 +11,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -27,7 +23,6 @@ jobs:
       - run: |
           npm ci
           npm run build
-          echo "css-colors.radi.pro" > build/CNAME
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
